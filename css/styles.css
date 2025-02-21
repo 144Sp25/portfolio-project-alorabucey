@@ -1,0 +1,106 @@
+/* Alora Bucey, 02/20/2024, portfolio site, index.html */
+
+/* Reset Styles - Ensures consistency across different browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Futura', sans-serif;
+    color: #6d8d52;
+    background-color: #f9f9f9;
+}
+
+/* Centering <h1> text */
+h1 {
+    text-align: center;
+}
+
+/* Makes images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Section */
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background: #6d8d52;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none; /* Removes bullet markers from unordered list */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover, 
+nav ul li a:visited {
+    color: #e49836;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* .col-8 Styles exclusive*/
+.col-8 dl {
+    padding-left: 20px;
+}
+.col-8 dd {
+    padding-left: 30px;
+}
+.col-8 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer Section */
+footer {
+    background: #6d8d52;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+/* Style the footer links the same as the nav links */
+footer a {
+    text-decoration: none; /* Removes underline from links */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px; /* Optional: adds some padding around the links */
+}
+
+footer a:hover,
+footer a:visited {
+    color: #e49836;
+}
