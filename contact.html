@@ -4,33 +4,52 @@
     <!-- Header -->
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/bp-logo-sm.png" type="image/png" />
-        <title>Alora Bucey's Portfolio: Contact Us</title>
+        <title>Alora Bucey's Portfolio: Get In Contact</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
 
     <!-- Body Content -->
     <body>
         <!-- Navigation -->
-            <nav>
-                <img src="img/bp-logo-sm.png" alt="Bucey Productions Logo" width="50" />
-                <p>&nbsp; &#9475; &nbsp;
-                    <a href="index.html">Home</a>
-                    &nbsp; &#9475; &nbsp;
-                    <a href="about.html">About Me</a>
-                    &nbsp; &#9475; &nbsp;
-                    <a href="contact.html">Get In Contact</a>
-                    &nbsp; &#9475; &nbsp;
-                    <a href="portfolio.html">Portfolio</a>
-                </p>
-            </nav>
+        <nav>
+            <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+            <img src="img/bp-logo-sm.png" alt="Bucey Productions Logo" width="50" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Get In Contact</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
         <main>    
             <div class="container">
                 <!-- Welcome Section -->
-                    <div class="col-8">
-                        <h1>Get In Contact</h1>
-                        <p>Filler</p>
-                    </div>
+                <section class="contact-section">
+                    <h1>Get in Touch</h1>
+                        <p>I'd love to hear from you! Whether you're an employer or client with a project in mind, feel free to reach out through any of the following:</p>
+                    <br>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:alorabucey@gmail.com">alorabucey@gmail.com</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+18169447746">816-944-7746</a></li>
+                        <li><strong>Instagram:</strong> <a href="https://instagram.com/alora.bucey" target="_blank">@alora.bucey</a></li>
+                    </ul>
+                    <br>
+                    <p>If you'd rather send a message directly, use the form below:</p>
+                    <form action="submit_form.php" method="POST">
+                        <label for="name"><strong>Your Name:</strong></label>
+                            <input type="text" id="name" name="name" required>
+                        <br>
+                        <label for="email"><strong>Your Email:</strong></label>
+                            <input type="email" id="email" name="email" required>
+                        <br>
+                        <label for="message"><strong>Your Message:</strong></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </section>
             </div>
         </main>
             
