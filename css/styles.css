@@ -9,17 +9,15 @@
 
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #6d8d52;
     background-color: #f9f9f9;
 }
 
-/* Centering <h1> text */
 h1 {
     text-align: center;
 }
 
-/* Makes images responsive */
 img {
     max-width: 100%;
     height: auto;
@@ -45,7 +43,6 @@ nav {
     text-align: center;
 }
 
-/* Logo */
 nav img {
     display: block;
     margin: 0 auto;
@@ -61,13 +58,15 @@ nav ul {
     padding-top: 10px;
     transform: translateY(-20px); /* Initially position the menu slightly above */
     opacity: 0; /* Start with full transparency */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for smooth dropdown */
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease; /* Transition for smooth dropdown */
 }
 
 nav ul.active {
-    display: flex; /* Show menu when toggled */
-    transform: translateY(0); /* Slide the menu into view */
-    opacity: 1; /* Make the menu fully visible */
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* Navigation Links */
@@ -79,7 +78,7 @@ nav ul li a {
     padding: 10px;
 }
 
-nav ul li a:hover, 
+nav ul li a:hover,
 nav ul li a:visited {
     color: #e49836;
 }
@@ -104,8 +103,8 @@ main {
 .col-8 {
     padding: 15px;
     background: white;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .col-8 dl {
@@ -122,39 +121,36 @@ main {
     margin-right: auto;
 }
 
-/* Style the specific hyperlinks inside the contact section */
+/* Contact Section Link Styles */
 .contact-section ul li a {
-    color: #6d8d52; /* Green color */
+    color: #6d8d52;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-/* Hover Effect for Specific Links */
 .contact-section ul li a:hover {
-    color: #e49836; /* Orange color on hover */
+    color: #e49836;
 }
-
 
 /* Button Styling */
 .contact-section button {
     width: 100%;
     padding: 12px;
-    background-color: #6d8d52; /* Green background */
+    background-color: #6d8d52;
     color: white;
     border: none;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition:
         background-color 0.3s ease,
-        box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+        box-shadow 0.3s ease;
 }
 
-/* Button Hover Effect */
 .contact-section button:hover {
-    background-color: #e49836; /* Orange background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+    background-color: #e49836;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Section */
@@ -170,36 +166,31 @@ footer {
     right: 0;
 }
 
-/* Input Fields Styling */
-.contact-section input, 
+.contact-section input,
 .contact-section textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     background-color: #f9f9f9;
     font-size: 16px;
     color: #333;
-    transition: border-color 0.3s ease; /* Smooth border transition */
+    transition: border-color 0.3s ease;
 }
 
-/* Input Focus Effect */
-.contact-section input:focus, 
+.contact-section input:focus,
 .contact-section textarea:focus {
-    border-color: #6d8d52; /* Green border on focus */
+    border-color: #6d8d52;
     outline: none;
 }
 
-/* Input Hover Effect */
-.contact-section input:hover, 
+.contact-section input:hover,
 .contact-section textarea:hover {
-    border-color: #e49836; /* Orange border on hover */
+    border-color: #e49836;
 }
 
-
-
-/* Style the footer links */
+/* Footer Links */
 footer a {
     text-decoration: none;
     color: white;
@@ -212,16 +203,128 @@ footer a:visited {
     color: #e49836;
 }
 
-/* Media Query: Mobile View */
-@media (min-width: 768px) {
+/* ======================= Tablet Media Query Start ======================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ensure nav links stay visible in desktop and tablet */
+        nav ul li {
+            display: block;
+        }
+
+        nav ul li a {
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
     nav ul {
-        display: flex;
+        display: flex !important;
         flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
 
     .menu-toggle {
-        display: none; /* Hide menu button on larger screens */
+        display: none;
+    }
+
+    .tablet-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* ======================= Desktop Media Query Start ======================= */
+@media (min-width: 1025px) {
+    /* Ensure nav links stay visible in desktop and tablet */
+        nav ul li {
+            display: block;
+        }
+
+        nav ul li a {
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only,
+    .tablet-only {
+        display: none;
+    }
+
+    /* Dynamic pseudo-class example for Desktop */
+    nav ul li a:hover {
+        color: #ff5733; /* Bright orange-red on hover */
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+}
+
+/* ======================= About Me Page Styling ======================= */
+.about-container {
+    display: flex;
+    align-items: center;  /* Aligns vertically */
+    justify-content: space-between; /* Spreads the content */
+    height: 100vh; /* Full screen height */
+    flex-wrap: wrap; /* Allows flex items to wrap in mobile view */
+}
+
+.portrait {
+    width: 25%; /* 1/4 of the container */
+    padding: 10px;
+}
+
+.portrait img {
+    width: 100%; /* Make image fill the div */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+.about-text {
+    width: 75%; /* 3/4 of the container */
+    padding: 20px;
+    font-size: 1.1rem; /* Adjust font size as needed */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    word-wrap: break-word; /* For older browsers */
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stacks content vertically on smaller screens */
+        height: auto; /* Allows height to adjust when stacked */
+    }
+
+    .portrait {
+        width: 100%; /* Full width for portrait on mobile */
+        margin-bottom: 20px; /* Space between portrait and text */
+    }
+
+    .about-text {
+        width: 100%; /* Full width for text on mobile */
+        padding: 10px; /* Reducing padding for mobile */
+        font-size: 1rem; /* Adjust font size for smaller screens */
     }
 }

@@ -26,10 +26,19 @@
         </nav>
         <main>    
             <div class="container">
-                <!-- Welcome Section -->
+                <!-- Mobile-only message -->
+                <p class="mobile-only" style="text-align: center; padding: 10px;">You're viewing this on a mobile device!</p>
+
+                <!-- Tablet-only message -->
+                <p class="tablet-only" style="text-align: center; padding: 10px; display: none;">Hello Tablet User! Here's how you can reach me.</p>
+
+                <!-- Desktop-only message -->
+                <p class="desktop-only" style="text-align: center; padding: 10px; display: none;">Welcome Desktop User! Feel free to connect.</p>
+
+                <!-- Contact Section -->
                 <section class="contact-section">
                     <h1>Get in Touch</h1>
-                        <p>I'd love to hear from you! Whether you're an employer or client with a project in mind, feel free to reach out through any of the following:</p>
+                    <p>I'd love to hear from you! Whether you're an employer or client with a project in mind, feel free to reach out through any of the following:</p>
                     <br>
                     <ul>
                         <li><strong>Email:</strong> <a href="mailto:alorabucey@gmail.com">alorabucey@gmail.com</a></li>
@@ -40,13 +49,13 @@
                     <p>If you'd rather send a message directly, use the form below:</p>
                     <form action="submit_form.php" method="POST">
                         <label for="name"><strong>Your Name:</strong></label>
-                            <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required>
                         <br>
                         <label for="email"><strong>Your Email:</strong></label>
-                            <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required>
                         <br>
                         <label for="message"><strong>Your Message:</strong></label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                 </section>
